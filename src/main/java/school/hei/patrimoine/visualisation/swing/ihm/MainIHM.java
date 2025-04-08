@@ -118,7 +118,7 @@ public class MainIHM extends JFrame implements Observer {
 
     westPanel.add(getFluxJournaliersIHM());
     contentPane.add(westPanel, WEST);
-    contentPane.add(evolutionPatrimoineSelectionnéIHM, CENTER);
+    contentPane.add(evolutionPatrimoineSelectionneIHM, CENTER);
   }
 
   @Override

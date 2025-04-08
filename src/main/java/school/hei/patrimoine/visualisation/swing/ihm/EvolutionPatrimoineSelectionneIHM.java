@@ -5,9 +5,9 @@ import java.util.Observer;
 import school.hei.patrimoine.visualisation.swing.modele.GrapheConfObservable;
 import school.hei.patrimoine.visualisation.swing.modele.PatrimoinesVisualisables;
 
-public class EvolutionPatrimoineSelectionnéIHM extends EvolutionPatrimoineIHM implements Observer {
+public class EvolutionPatrimoineSelectionneIHM extends EvolutionPatrimoineIHM implements Observer {
 
-  public EvolutionPatrimoineSelectionnéIHM(
+  public EvolutionPatrimoineSelectionneIHM(
       PatrimoinesVisualisables patrimoinesVisualisables,
       GrapheConfObservable grapheConfObservable) {
     super(patrimoinesVisualisables::getEvolutionPatrimoine, grapheConfObservable::getGrapheConf);

@@ -40,7 +40,7 @@ public class MainIHM extends JFrame implements Observer {
   private final FluxImpossiblesIHM fluxImpossiblesIHM;
   private final FluxJournaliersIHM fluxJournaliersIHM;
 
-  private final EvolutionPatrimoineSelectionnéIHM evolutionPatrimoineSelectionnéIHM;
+  private final EvolutionPatrimoineSelectionneIHM evolutionPatrimoineSelectionneIHM;
   private final SelecteurGrapheConfIHM selecteurGrapheConfIHM;
 
   public MainIHM(List<Patrimoine> patrimoines) {
@@ -57,8 +57,8 @@ public class MainIHM extends JFrame implements Observer {
     this.fluxJournaliersIHM = new FluxJournaliersIHM(patrimoinesVisualisables);
 
     this.selecteurPeriodeIHM = new SelecteurPeriodeIHM(patrimoinesVisualisables);
-    this.evolutionPatrimoineSelectionnéIHM =
-        new EvolutionPatrimoineSelectionnéIHM(patrimoinesVisualisables, grapheConfObservable);
+    this.evolutionPatrimoineSelectionneIHM =
+        new EvolutionPatrimoineSelectionneIHM(patrimoinesVisualisables, grapheConfObservable);
     this.selecteurGrapheConfIHM = new SelecteurGrapheConfIHM(grapheConfObservable);
 
     configureFrame();

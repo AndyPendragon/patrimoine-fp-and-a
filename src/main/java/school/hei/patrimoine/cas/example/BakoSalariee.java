@@ -25,18 +25,14 @@ public class BakoSalariee extends Cas {
   public BakoSalariee() {
     super(LocalDate.of(2025, APRIL, 8), LocalDate.of(2026, APRIL, 8), new Personne("Bako"));
     
-    // Date de référence: 8 avril 2025
     LocalDate dateReference = LocalDate.of(2025, APRIL, 8);
     
-    // Création des comptes
     compteBNI = new Compte("Compte BNI", dateReference, ariary(2_000_000));
     compteBMOI = new Compte("Compte BMOI", dateReference, ariary(625_000));
     coffreFort = new Compte("Coffre fort", dateReference, ariary(1_750_000));
     
-    // Création du matériel (ordinateur portable)
     ordinateur = new Materiel("Ordinateur portable", dateReference, dateReference, ariary(3_000_000), -0.12);
     
-    // Flux d'argent: Salaire mensuel
     new FluxArgent(
         "Salaire",
         compteBNI,
@@ -45,7 +41,6 @@ public class BakoSalariee extends Cas {
         2, // Tous les 2 du mois
         ariary(2_125_000));
     
-    // Transfert d'argent: Épargne mensuelle
     new TransfertArgent(
         "Épargne mensuelle",
         compteBNI,
@@ -55,7 +50,6 @@ public class BakoSalariee extends Cas {
         3, // Tous les 3 du mois
         ariary(200_000));
     
-    // Flux d'argent: Loyer
     new FluxArgent(
         "Loyer",
         compteBNI,
@@ -64,7 +58,6 @@ public class BakoSalariee extends Cas {
         26, // Tous les 26 du mois
         ariary(-600_000));
     
-    // Flux d'argent: Dépenses de vie
     new FluxArgent(
         "Dépenses de vie",
         compteBNI,
@@ -86,7 +79,6 @@ public class BakoSalariee extends Cas {
 
   @Override
   protected void init() {
-    // Pas besoin d'initialisation supplémentaire car les comptes sont déjà initialisés avec leurs valeurs
   }
 
   @Override
@@ -96,6 +88,5 @@ public class BakoSalariee extends Cas {
 
   @Override
   protected void suivi() {
-    // Pas besoin de suivi particulier
   }
 } 

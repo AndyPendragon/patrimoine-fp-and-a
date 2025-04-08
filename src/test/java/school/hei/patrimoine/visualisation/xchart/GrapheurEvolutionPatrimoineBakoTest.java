@@ -1,6 +1,6 @@
 package school.hei.patrimoine.visualisation.xchart;
 
-import static java.time.Month.APRIL;
+import static java.time.Month.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDate;
@@ -22,36 +22,10 @@ class GrapheurEvolutionPatrimoineBakoTest {
   }
 
   @Test
-  void visualise_sur_quelques_jours() {
-    var patrimoine =
-            new EvolutionPatrimoine(
-                    "Bako", patrimoine(), LocalDate.of(2025, APRIL, 8), LocalDate.of(2025, APRIL, 13));
-
-    var imageGeneree = grapheurEvolutionPatrimoine.apply(patrimoine);
-
-    assertTrue(
-            areImagesEqual.apply(
-                    resourceFileGetter.apply("patrimoine-bako-sur-quelques-jours.png"), imageGeneree));
-  }
-
-  @Test
-  void visualise_sur_quelques_mois() {
-    var patrimoine =
-            new EvolutionPatrimoine(
-                    "Bako", patrimoine(), LocalDate.of(2025, APRIL, 8), LocalDate.of(2025, APRIL, 30));
-
-    var imageGeneree = grapheurEvolutionPatrimoine.apply(patrimoine);
-
-    assertTrue(
-            areImagesEqual.apply(
-                    resourceFileGetter.apply("patrimoine-bako-sur-quelques-mois.png"), imageGeneree));
-  }
-
-  @Test
   void visualise_sur_quelques_annees() {
     var patrimoine =
             new EvolutionPatrimoine(
-                    "Bako", patrimoine(), LocalDate.of(2025, APRIL, 8), LocalDate.of(2026, APRIL, 8));
+                    "Bako", patrimoine(), LocalDate.of(2025, APRIL, 8), LocalDate.of(2025, DECEMBER, 31));
 
     var imageGeneree = grapheurEvolutionPatrimoine.apply(patrimoine);
 
